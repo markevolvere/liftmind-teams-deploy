@@ -1,0 +1,32 @@
+# ── Teams Bot Framework ────────────────────────────────────────────────────────
+aiohttp>=3.10,<4
+botbuilder-core==4.17.1
+botbuilder-integration-aiohttp==4.17.1
+
+# ── Anthropic SDK ──────────────────────────────────────────────────────────────
+anthropic>=0.28.0
+
+# ── PostgreSQL ─────────────────────────────────────────────────────────────────
+psycopg2-binary>=2.9.9
+pgvector>=0.2.4
+
+# ── Embeddings ─────────────────────────────────────────────────────────────────
+# sentence-transformers pulls in torch (CPU-only variant specified in Dockerfile)
+# Pinned to versions compatible with torch 2.3.1 (avoids transformers >= 4.50 bug)
+sentence-transformers>=2.2.0,<3.4
+transformers>=4.41,<4.50
+
+# ── PDF / document processing ─────────────────────────────────────────────────
+pdfplumber>=0.9.0
+pypdf>=3.17.0
+pymupdf>=1.23.0
+
+# ── RAG document ingestion (langchain used in rag.py for PDF loading) ──────────
+langchain>=0.1.0
+langchain-community>=0.0.16
+langchain-text-splitters>=0.0.1
+
+# ── Utilities ─────────────────────────────────────────────────────────────────
+python-dotenv>=1.0.0
+Pillow>=10.0.0
+numpy>=1.24.0
